@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2730/2730685.png" type="image/icon type">
+    <link href="./style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Game</title>
+</head>
+<body>
+    <section class="homeScreen" id="home">
+        <img class="homeImg" src="./black-wallpaper-1-1024x768.jpg" alt="word map"/>
+        <h1>CoolGame</h1>
+        <h3>Let's start the game</h3>
+        <button class="startBtn" id="startBtn" onclick="startBtnFunc()">Start</button>
+        <i class="fa-solid fa-spider spiderAnime1"></i>
+        <span class="spiderLine"></span>
+    </section>
+    <section class="gameSection hide" id="gameReveal">
+        <p id="attempt" class="attempt">Attempt: 1</p>
+        <p id="pointsId" class="points">Points:<br> 0</p>        
+        <div id="gameEnd" class="game-end-modal hide">
+            <h1>Game Over</h1>
+            <p>Restart the game and try againg or save your points!</p>
+            <button class="restart-btn" onclick="restartGame()" id="restartBtn">Restart <i class="fa-solid fa-rotate-right"></i></button>
+            <button class="save-btn" onclick="saveGame()" >Save the game</button>
+        </div>
+    </section>
+    <div class="save-modal hide" id='gameSaveModal'>
+        <div class="saveForum">
+        <h1>Save your game</h1>
+        <input type="text" class="userName" id="userName" placeholder="Enter your nickname" minlength="4" maxlength="20">
+        <p id="pointsForSave">Points: </p>
+        <button id="saveGameInModal" onclick="finalSave()" id="saveBtn">Save</button>
+        <br>
+        </div>
+        <button class="restart-btn" onclick="restartGame()" id="restartBtn">Restart <i class="fa-solid fa-rotate-right"></i></button>
+        <button class="rank-btn" onclick="rankList()" id="RankLIstBtn">Rank list</button>
+    </div>
+    <div class="rank-list hide" id="rankList">
+       <div class="first-place">
+        <span class="place">1st</span>
+        <img class="userImg" src="./IMG_20220211_125722_810.jpg" alt="dog on beach with pigs">
+        <span class="name1">Aysh x-12</span>
+        <span class="points1"> <i class="fa-solid fa-spider"></i>999999...pts</span>
+       </div><br>
+       <div class="second-place">
+        <span class="place">2nd</span>
+        <img class="userImg" src="./c708f2c6-776e-46b0-a76a-47c3920deb7b.jpg" alt="dog on beach with pigs">
+        <span class="name1">Aysh x-13</span>
+        <span class="points1"> <i class="fa-solid fa-spider"></i>199999...pts</span>
+       </div><br>
+       <div class="third-place">
+        <span class="place">3rd</span>
+        <img class="userImg" src="./png-transparent-user-profile-computer-icons-user-interface-mystique-miscellaneous-user-interface-design-smile.png" alt="user">
+        <span class="name1" id='rankName'></span>
+        <span class="points1" id="pointsRank"></span>
+       </div><br>
+       <button class="restart-btn2" onclick="restartGame()" id="restartBtn">Restart <i class="fa-solid fa-rotate-right"></i></button>
+       <button class="save-btn2" onclick="saveGame1()" id="saveBtn2">Save the game</button>   
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+<script src="./game.js"></script>
+</body>
+</html>
