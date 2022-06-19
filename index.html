@@ -61,6 +61,11 @@
        <button class="restart-btn2" onclick="restartGame()" id="restartBtn">Restart <i class="fa-solid fa-rotate-right"></i></button>
        <button class="save-btn2" onclick="saveGame1()" id="saveBtn2">Save the game</button>   
     </div>
+    <div class='pause-modal hide' id="pauseModal">
+        <h1>You paused the game :(</h1>
+        <p>I hope you finish it!!! <i class="fa-solid fa-face-frown"></i></p>
+        <button class="continue-btn" id="continueBtn" onclick="continueFunc()">Continue</button>
+    </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
 <script src="./game.js"></script>
