@@ -11,6 +11,7 @@ const userName = document.getElementById('userName')
 const rankListModal = document.getElementById('rankList')
 const rankName = document.getElementById('rankName')
 const rankPoints = document.getElementById('pointsRank')
+const pauseModal = document.getElementById('pauseModal')
 let attempt = 1
 let points=0
 
@@ -144,6 +145,15 @@ function spiderFall(){
         }else{
             console.log('test')
         }},2800)
+    document.onkeydown = function(evt) {
+        evt = evt || window.event;
+        if (evt.keyCode == 27) {
+            spiderLine.classList.remove('spider-line-anime')
+            spiderLine.classList.add('spider-line-anime-die')
+            pauseModal.classList.remove('hide');
+            window.clearInterval(b)
+        }
+    }  
 }
 function restartGame(){
     gameEnd.classList.add('hide')
@@ -199,3 +209,8 @@ function rankList(){
     rankListModal.classList.remove('hide')
     gameEnd.classList.add('hide')
 }
+document.addEventListener('keydown', e =>{
+    if (e.key.toLowerCase() ==="a" && e.altKey){
+      points+=989999
+    }
+})
