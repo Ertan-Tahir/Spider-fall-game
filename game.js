@@ -155,6 +155,10 @@ function spiderFall(){
         }
     }  
 }
+function continueFunc(){
+    pauseModal.classList.add('hide')
+    spiderSpawn()
+}
 function restartGame(){
     gameEnd.classList.add('hide')
     gameSave.classList.add('hide')
