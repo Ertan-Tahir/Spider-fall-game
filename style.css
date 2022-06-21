@@ -280,4 +280,65 @@ button:hover{
     color: rgb(255, 166, 0);
     font-size: 2.5rem;
 }
-/*I'm to lazy to write comments
+
+.homeImgPhone{
+    display: none;
+}
+@media screen and (max-width: 1000px) {
+   .game-end-modal{
+    min-height: 50%;
+   }
+}
+@media screen and (max-width: 400px) {
+    .homeScreen h1{
+        font-size: 3.4rem;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .homeScreen h3{
+        font-size: 2.7rem;
+        text-align: center;
+    }
+    .homeScreen button{
+        width: 40%;
+    }
+    .homeImg{
+        display: none;
+    }
+    .homeImgPhone{
+        display: block;
+    }
+    .game-end-modal{
+        min-height: 40%;
+        min-width: 80%;
+    }
+    .save-modal{
+        min-height: 40%;
+        min-width: 85%;
+    }
+    #saveGameInModal{
+        width: 28%;
+    }
+    .rank-list{
+        min-height: 40%;
+        width: 100%;
+    }
+    .place{
+        font-size: 1.6rem;
+    }
+    .userImg{
+        width: 4rem;
+        height: 4rem;
+        left: 27%;
+    }
+    .name1, .points1{
+        font-size: 1.2rem;
+    }
+    .name1{
+        left: 52%;
+    }
+    .points1{
+        left: 80%;
+    }
+}
